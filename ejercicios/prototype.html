@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Prototype</title>
+</head>
+<body>
+  <a href="/ejercicios/">Go back</a>
+  <p><em>Abre la consola 👉🏻</em></p>
+
+  <script>
+    // const heroMethods = {
+    //   saludar: function() {
+    //     console.log(`Me llamo ${this.name}`);
+    //   },
+    // }
+
+    // function Hero(name) {
+    //   const hero = {
+    //     name: name
+    //   }
+    //   hero.saludar = heroMethods.saludar;
+    //   return hero;
+    // }
+
+    // const zed = Hero("Zed");
+    // zed.saludar();
+
+    // const shen = Hero("Shen");
+    // shen.saludar();
+
+    // ------------------------------------------------------
+
+    // const heroMethods = {
+    //   saludar: function() {
+    //     console.log(`Soy ${this.name}`);
+    //   },
+    // }
+
+    // function Hero(name) {
+    //   const hero = Object.create(heroMethods);
+    //   hero.name = name;
+    //   return hero;
+    // }
+
+    // const zed = Hero("Zed");
+    // zed.saludar();
+
+    // const shen = Hero("Shen");
+    // shen.saludar();
+
+    // Object.create va a recibir un objeto y en base a eso va a crear un nuevo objeto.
+    // const nuevoObjeto = Object.create(objeto);
+    // nuevoObjeto va a tener todas las propiedades que 'objeto' tiene definidas.
+
+    // ------------------------------------------------------
+
+    // Los métodos de hero dentro de Hero
+
+    // const heroMethods = {
+    //   saludar: function() {
+    //     console.log(`Soy ${this.name}`);
+    //   },
+    // }
+
+    function Hero(name) {
+      // const hero = Object.create(Hero.prototype);
+      // this = Object.create(Hero.prototype);
+      this.name = name;
+      // Retorna this implícitamente
+      // return this;
+    }
+
+    // El keyword 'new' es algo que le añadimos al lenguaje para facilitarnos ciertos procesos.
+    // new es sólo un helper de Object.create
+
+    Hero.prototype.saludar = function() {
+      console.log(`New ${this.name}`);
+    };
+
+    const zed = new Hero("Zed");
+    zed.saludar();
+
+    const shen = new Hero("Shen");
+    shen.saludar();
+
+  </script>
+</body>
+</html>
