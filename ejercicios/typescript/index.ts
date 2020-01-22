@@ -80,3 +80,32 @@ function showFullName(firstName: string, lastName: string = "Smith"): string {
 
 const carl = showFullName("Carl");
 console.log(carl);
+
+// -- -- -- Interfaces -- -- --
+interface Rectangulo {
+  // Vamos a declarar las propiedades de la propiedad.
+  ancho: number;
+  alto: number;
+  color?: Color;
+};
+
+// Cuando tenemos una interfaz esta se vuelve un tipo, esto quiere decir que podemos
+// usarlo de la misma forma en que hemos tipado las variables.
+let rect: Rectangulo = {
+  ancho: 12,
+  alto: 2,
+  // color: Color.Azul
+};
+
+function area(r: Rectangulo): number {
+  return r.alto * r.ancho;
+}
+
+const areaRect = area(rect);
+console.log(areaRect);
+
+rect.toString = function() {
+  return this.color ? `Un rectángulo ${this.color}` : `Un rectángulo`;
+};
+
+console.log(rect.toString());
