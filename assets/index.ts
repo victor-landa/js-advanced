@@ -1,11 +1,11 @@
 // Cuando usamos scripts con type module hay que especificar la extensión.
-import MediaPlayer from './MediaPlayer.js';
-import AutoPlay from './plugins/AutoPlay.js';
-import AutoPause from './plugins/AutoPause.ts';
+import MediaPlayer from './MediaPlayer';
+import AutoPlay from './plugins/AutoPlay';
+import AutoPause from './plugins/AutoPause';
 
 const video = document.querySelector("video");
-const button = document.querySelector("button");
-const buttonSound = document.querySelector("#audioVideo");
+const button: HTMLElement = document.querySelector("button");
+const buttonSound: HTMLElement = document.querySelector("#audioVideo");
 
 // Instanciamos al objeto pasando un objeto de configuración
 const player = new MediaPlayer({ el: video, plugins: [

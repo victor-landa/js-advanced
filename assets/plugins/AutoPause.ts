@@ -8,7 +8,8 @@ class AutoPause {
   private threshold: number;
   private isVisible: boolean;
 
-  // MediaPlayer está haciendo referencia a un valor pero lo estamos utilizando como un tipo.
+  // MediaPlayer está haciendo referencia a un valor 
+  // pero lo estamos utilizando como un tipo.
   player: MediaPlayer;
 
   constructor() {
