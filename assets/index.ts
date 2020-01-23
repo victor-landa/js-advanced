@@ -23,7 +23,8 @@ buttonSound.onclick = () => {
   console.log(player.media.muted, 'Muted');
 }
 
-// Con este if vamos a verificar si el navegador del usuario les da apoyo a los service workers, 
+// Con este if vamos a verificar si el navegador del usuario 
+// les da apoyo a los service workers, 
 // este es un feature reciente, no todos los navegadores lo manejan. 
 if('serviceWorker' in navigator) {
   // Registramos el service worker.
