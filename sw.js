@@ -37,14 +37,14 @@ async function precache() {
   // Para terminos de los service workers es diferente hacer un request a / que a /index.html, aunque nos redirijan a la misma página, por eso ponemos ambos.
   // Ponemos return porque es una promesa y es justo lo que se espera con waitUntil()
   return cache.addAll([
-    '/',
-    '/index.html',
-    '/assets/index.js',
-    '/assets/MediaPlayer.js',
-    '/assets/plugins/AutoPlay.js',
-    '/assets/plugins/AutoPause.js',
-    '/assets/index.css',
-    '/assets/placeholder.mp4',
+    // '/',
+    // '/index.html',
+    // '/assets/index.js',
+    // '/assets/MediaPlayer.js',
+    // '/assets/plugins/AutoPlay.js',
+    // '/assets/plugins/AutoPause.js',
+    // '/assets/index.css',
+    // '/assets/placeholder.mp4',
   ]);
 }
 
