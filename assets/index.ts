@@ -2,6 +2,7 @@
 import MediaPlayer from './MediaPlayer';
 import AutoPlay from './plugins/AutoPlay';
 import AutoPause from './plugins/AutoPause';
+import Ads from './plugins/Ads';
 
 const video = document.querySelector("video");
 const button: HTMLElement = document.querySelector("button");
@@ -10,7 +11,7 @@ const buttonSound: HTMLElement = document.querySelector("#audioVideo");
 // Instanciamos al objeto pasando un objeto de configuración
 const player = new MediaPlayer({ el: video, plugins: [
   // Autoplay va a ser una clase, por tanto hay que instanciarla.
-  new AutoPlay(), new AutoPause()], 
+  new AutoPlay(), new AutoPause(), new Ads()], 
 });
 
 button.onclick = () => {

@@ -1,10 +1,12 @@
 import MediaPlayer from '../../MediaPlayer';
-import Ads from './Ads';
+import Ads, { Ad } from './Ads';
 
+// En este archivo vamos a inicializar el plugin
 class AdsPlugin {
   private ads: Ads;
   private player: MediaPlayer;
   private media: HTMLMediaElement;
+  private currentAd: Ad;
 
   constructor() {
     this.ads = Ads.getInstance();
@@ -27,10 +29,16 @@ class AdsPlugin {
   }
 
   private renderAd() {
+    if(this.currentAd) {
+      return;
+    }
     const ad = this.ads.getAd();
-    console.log(ad);
+    this.currentAd = ad;
+    console.log(this.currentAd);
   }
 }
+
+export default AdsPlugin;
 
 // Los HTMLMediaElements tienen un event que se llama timeUpdate,
 // timeUpdate nos notifica cada que cambió el tiempo del mediaElement
