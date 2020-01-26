@@ -1,8 +1,8 @@
 // Cuando usamos scripts con type module hay que especificar la extensión.
-import MediaPlayer from './MediaPlayer';
-import AutoPlay from './plugins/AutoPlay';
-import AutoPause from './plugins/AutoPause';
-import Ads from './plugins/Ads';
+import MediaPlayer from '@victorlanda/mediaplayer';
+import AutoPlay from '@victorlanda/mediaplayer/lib/plugins/AutoPlay';
+import AutoPause from '@victorlanda/mediaplayer/lib/plugins/AutoPause';
+import Ads from '@victorlanda/mediaplayer/lib/plugins/Ads';
 
 const video = document.querySelector("video");
 const button: HTMLElement = document.querySelector("button");
